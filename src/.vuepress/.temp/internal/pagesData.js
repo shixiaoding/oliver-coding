@@ -15,10 +15,6 @@ export const pagesData = {
   "v-438ffe52": () => import(/* webpackChunkName: "v-438ffe52" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/demo/markdown.html.js").then(({ data }) => data),
   // path: /demo/page.html
   "v-6e19edb7": () => import(/* webpackChunkName: "v-6e19edb7" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/demo/page.html.js").then(({ data }) => data),
-  // path: /middleware/
-  "v-4d194044": () => import(/* webpackChunkName: "v-4d194044" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/middleware/index.html.js").then(({ data }) => data),
-  // path: /spring/
-  "v-19ee9aae": () => import(/* webpackChunkName: "v-19ee9aae" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/spring/index.html.js").then(({ data }) => data),
   // path: /java/
   "v-14c69af4": () => import(/* webpackChunkName: "v-14c69af4" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/java/index.html.js").then(({ data }) => data),
   // path: /posts/cherry.html
@@ -29,6 +25,10 @@ export const pagesData = {
   "v-f0ec4556": () => import(/* webpackChunkName: "v-f0ec4556" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/posts/strawberry.html.js").then(({ data }) => data),
   // path: /posts/tomato.html
   "v-df8b6e0c": () => import(/* webpackChunkName: "v-df8b6e0c" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/posts/tomato.html.js").then(({ data }) => data),
+  // path: /middleware/
+  "v-4d194044": () => import(/* webpackChunkName: "v-4d194044" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/middleware/index.html.js").then(({ data }) => data),
+  // path: /spring/
+  "v-19ee9aae": () => import(/* webpackChunkName: "v-19ee9aae" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/spring/index.html.js").then(({ data }) => data),
   // path: /java/basic/basic.html
   "v-d6e57e40": () => import(/* webpackChunkName: "v-d6e57e40" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/java/basic/basic.html.js").then(({ data }) => data),
   // path: /java/basic/collection.html

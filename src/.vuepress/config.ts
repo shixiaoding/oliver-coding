@@ -3,7 +3,7 @@ import theme from "./theme.js";
 
 export default defineUserConfig({
   theme,
-  base: "/oliver-coding/",
+  base: "/",
   lang: "zh-CN",
   title: "鼎子哥Coding",
   description: "鼎子哥Coding",
