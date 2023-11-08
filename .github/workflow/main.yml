@@ -3,17 +3,15 @@ name: docs build
 on:
   push:
     branches:
-      # 确保这是你正在使用的分支名称
       - main
 
 jobs:
-  LearnData-build:
+  deploy-gh-pages:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          # 获取所有标记和分支的所有历史记录（updatetime 必须，否则每次都会变化）
           fetch-depth: 0
           # 如果你文档需要 Git 子模块，取消注释下一行
           # submodules: true
@@ -36,11 +34,10 @@ jobs:
         run: |-
           pnpm run docs:build
           > src/.vuepress/dist/.nojekyll
-
-      - name: Deploy GitHub Pages
+      - name: 部署文档
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # 这是文档部署到的分支名称
-          BRANCH: gh-pages
-          FOLDER: src/.vuepress/dist
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages
+          folder: src/.vuepress/dist
+          
