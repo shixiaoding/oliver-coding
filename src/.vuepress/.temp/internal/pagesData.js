@@ -1,6 +1,4 @@
 export const pagesData = {
-  // path: /README%20copy.html
-  "v-05cab828": () => import(/* webpackChunkName: "v-05cab828" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/README copy.html.js").then(({ data }) => data),
   // path: /
   "v-8daa1a0e": () => import(/* webpackChunkName: "v-8daa1a0e" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/index.html.js").then(({ data }) => data),
   // path: /intro.html

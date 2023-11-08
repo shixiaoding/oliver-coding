@@ -1,5 +1,4 @@
 export const pagesRoutes = [
-  ["v-05cab828","/README%20copy.html",{"y":"h","t":"博客主页","i":"home"},["/README copy.html","/README copy.md",":md"]],
   ["v-8daa1a0e","/",{"y":"h","t":"首页","i":"home"},["/README.md"]],
   ["v-184f4da6","/intro.html",{"v":"/assets/images/cover3.jpg","e":"<h1> 介绍页</h1>\n<p>将你的个人介绍和档案放置在此处。</p>\n","y":"a","t":"介绍页","i":"circle-info"},[":md"]],
   ["v-2e3eac9e","/slides.html",{"e":"<!-- markdownlint-disable MD024 MD033 MD051 -->\n<p>@slidestart</p>\n<!-- .slide: data-transition=\"slide\" -->\n<h2> 幻灯片演示</h2>\n<!-- .element: class=\"r-fit-text\" -->\n<p>一个简单的幻灯片演示与各种小贴士。</p>\n<!-- .element: class=\"r-fit-text\" -->\n<blockquote>\n<p>作者 Mr.Hope. 请滚动鼠标滚轮进入下一页</p>\n</blockquote>\n<hr>\n<h2> 标注幻灯片</h2>","y":"s","t":"幻灯片页","i":"person-chalkboard"},[":md"]],
