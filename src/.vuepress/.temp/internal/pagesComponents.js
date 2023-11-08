@@ -7,6 +7,8 @@ export const pagesComponents = {
   "v-184f4da6": defineAsyncComponent(() => import(/* webpackChunkName: "v-184f4da6" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/intro.html.vue")),
   // path: /slides.html
   "v-2e3eac9e": defineAsyncComponent(() => import(/* webpackChunkName: "v-2e3eac9e" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/slides.html.vue")),
+  // path: /middleware/
+  "v-4d194044": defineAsyncComponent(() => import(/* webpackChunkName: "v-4d194044" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/middleware/index.html.vue")),
   // path: /java/
   "v-14c69af4": defineAsyncComponent(() => import(/* webpackChunkName: "v-14c69af4" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/java/index.html.vue")),
   // path: /demo/
@@ -19,10 +21,6 @@ export const pagesComponents = {
   "v-438ffe52": defineAsyncComponent(() => import(/* webpackChunkName: "v-438ffe52" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/demo/markdown.html.vue")),
   // path: /demo/page.html
   "v-6e19edb7": defineAsyncComponent(() => import(/* webpackChunkName: "v-6e19edb7" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/demo/page.html.vue")),
-  // path: /middleware/
-  "v-4d194044": defineAsyncComponent(() => import(/* webpackChunkName: "v-4d194044" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/middleware/index.html.vue")),
-  // path: /spring/
-  "v-19ee9aae": defineAsyncComponent(() => import(/* webpackChunkName: "v-19ee9aae" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/spring/index.html.vue")),
   // path: /posts/cherry.html
   "v-2bc6566a": defineAsyncComponent(() => import(/* webpackChunkName: "v-2bc6566a" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/posts/cherry.html.vue")),
   // path: /posts/dragonfruit.html
@@ -31,6 +29,8 @@ export const pagesComponents = {
   "v-f0ec4556": defineAsyncComponent(() => import(/* webpackChunkName: "v-f0ec4556" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/posts/strawberry.html.vue")),
   // path: /posts/tomato.html
   "v-df8b6e0c": defineAsyncComponent(() => import(/* webpackChunkName: "v-df8b6e0c" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/posts/tomato.html.vue")),
+  // path: /spring/
+  "v-19ee9aae": defineAsyncComponent(() => import(/* webpackChunkName: "v-19ee9aae" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/spring/index.html.vue")),
   // path: /java/basic/basic.html
   "v-d6e57e40": defineAsyncComponent(() => import(/* webpackChunkName: "v-d6e57e40" */"/Users/shiding/new-learn/oliver-coding/src/.vuepress/.temp/pages/java/basic/basic.html.vue")),
   // path: /java/basic/collection.html

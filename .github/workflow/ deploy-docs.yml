@@ -42,4 +42,3 @@ jobs:
           branch: gh-pages
           # 所部署文档的目录
           folder: src/.vuepress/dist
-          
