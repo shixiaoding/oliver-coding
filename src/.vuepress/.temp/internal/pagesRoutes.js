@@ -13,7 +13,7 @@ export const pagesRoutes = [
   ["v-f0ec4556","/posts/strawberry.html",{"d":1641859200000,"l":"2022年1月11日","c":["水果","草莓"],"g":["红","小"],"e":"<h1> 草莓</h1>\n<h2> 标题 2</h2>\n<p>这里是内容。</p>\n<h3> 标题 3</h3>\n<p>这里是内容。</p>\n","y":"a","t":"草莓","i":"pen-to-square"},[":md"]],
   ["v-df8b6e0c","/posts/tomato.html",{"d":1641945600000,"l":"2022年1月12日","c":["蔬菜"],"g":["红","圆"],"u":true,"v":"/assets/images/cover2.jpg","e":"<h1> 番茄</h1>\n<h2> 标题 2</h2>\n<p>这里是内容。</p>\n<h3> 标题 3</h3>\n<p>这里是内容。</p>\n","y":"a","t":"番茄","i":"pen-to-square"},[":md"]],
   ["v-4d194044","/middleware/",{"c":["使用指南"],"e":"<h2> 目录</h2>\n<p><strong>中间件文档相关待更新</strong></p>\n","y":"a","t":"中间件","i":"laptop-code"},["/middleware/README.md"]],
-  ["v-19ee9aae","/spring/",{"c":["使用指南"],"e":"<h2> 目录</h2>\n<p><strong>Spring文档相关待更新</strong></p>\n","y":"a","t":"Spring","i":"laptop-code"},["/spring/README.md"]],
+  ["v-19ee9aae","/spring/",{"y":"a","t":"Spring","i":"laptop-code"},["/spring/README.md"]],
   ["v-d6e57e40","/java/basic/basic.html",{"e":"<h2> 目录</h2>\n<ul>\n<li>Java基础</li>\n</ul>\n<h2> 好家伙哈哈</h2>\n<h2> 是实打实</h2>\n","y":"a","t":"Java","i":"laptop-code","I":0},[":md"]],
   ["v-422c02b4","/java/basic/collection.html",{"y":"a","t":""},[":md"]],
   ["v-22934f2d","/java/basic/concurrent.html",{"y":"a","t":""},[":md"]],
