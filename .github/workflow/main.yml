@@ -1,60 +1,78 @@
-# 工作流名称，会出现在 GitHub 仓库的 Actions 选项栏中
-name: Deploy my blog
+name: Deploy Github Docs
 
-# 指定工作流的触发事件，此处为 push 事件，表示在本地 push 指定分支至 github 仓库时触发工作流
+# on:
+#   workflow_call:
+#     secrets:
+#       ACCESS_TOKEN:
+#         required: true
+
 on:
   push:
     branches:
-      # 指定通过push触发工作流时的分支
       - main
 
-# jobs 表示将当前“部署文档”工作流的所有任务分组在一起，并定义一个名为 deploy-gh-pages 的任务
 jobs:
-  deploy-gh-pages:
-    # 配置任务运行在最新的 Ubuntu Linux 运行器
+  deploy-github-pages:
+    name: Deploy V2 docs to GitHub pages
     runs-on: ubuntu-latest
-    # steps 表示将 deploy-gh-pages 任务下的所有步骤分为一组，嵌套的每一个条目都是一个独立的 action 或者 shell 脚本
+    # if: github.repository == 'vuepress-theme-hope/vuepress-theme-hope'
     steps:
       - name: Checkout
-        # uses 表示当前步骤使用 actions/checkout 动作的v3大版本 ，这是一个可以检出仓库代码到运行器的动作，它允许你运行脚本或者其他动作侵入你的代码（比如构建或者测试工具）
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # 如果你文档需要 Git 子模块，取消注释下一行
-          # submodules: true
+          submodules: true
 
-      # 安装指定版本的 Node.js，让后续步骤可使用 npm 和 node 命令
-      - name: install Node.js
-        uses: actions/setup-node@v3
+      - name: Restore Build Result
+        uses: actions/download-artifact@v3
         with:
-          node-version: 18
-          cache: npm
+          name: build-result
 
-      - name: Install Dependencies
-        # run 表示告诉任务在运行器上执行一个命令
-        # npm ci 类似于 npm-install ，但它旨在用于自动化环境，如测试平台，持续集成和部署，比常规安装更严格，项目中必须有package-lock.json
-        run: npm ci
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: true
 
-      - name: Build docs
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Docs build
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: |-
-          npm run docs:build
-          > src/.vuepress/dist/.nojekyll
+        run: pnpm run docs:vite-build
 
-      # 复制根目录下的“百度网站收录认证文件”到构建的dist目录
-      - name: Copy baidu-verify file
-        uses: canastro/copy-file-action@master
-        with:
-          # 源文件目录
-          source: baidu_verify_codeva-p5FuxDFHWV.html
-          # 目标目录
-          target: src/.vuepress/dist/
+      # - name: Combine output
+      #   run: |
+      #     pnpm cpx "docs/auto-catalog/dist/**" dist/auto-catalog
+      #     pnpm cpx "docs/blog2/dist/**" dist/blog
+      #     pnpm cpx "docs/comment2/dist/**" dist/comment
+      #     pnpm cpx "docs/components/dist/**" dist/components
+      #     pnpm cpx "docs/copy-code2/dist/**" dist/copy-code
+      #     pnpm cpx "docs/copyright2/dist/**" dist/copyright
+      #     pnpm cpx "docs/feed2/dist/**" dist/feed
+      #     pnpm cpx "docs/lightgallery/dist/**" dist/lightgallery
+      #     pnpm cpx "docs/md-enhance/dist/**" dist/md-enhance
+      #     pnpm cpx "docs/photo-swipe/dist/**" dist/photo-swipe
+      #     pnpm cpx "docs/pwa2/dist/**" dist/pwa
+      #     pnpm cpx "docs/reading-time2/dist/**" dist/reading-time
+      #     pnpm cpx "docs/remove-pwa/dist/**" dist/remove-pwa
+      #     pnpm cpx "docs/redirect/dist/**" dist/redirect
+      #     pnpm cpx "docs/rtl/dist/**" dist/rtl
+      #     pnpm cpx "docs/sass-palette/dist/**" dist/sass-palette
+      #     pnpm cpx "docs/search-pro/dist/**" dist/search-pro
+      #     pnpm cpx "docs/seo2/dist/**" dist/seo
+      #     pnpm cpx "docs/shared/dist/**" dist/shared
+      #     pnpm cpx "docs/sitemap2/dist/**" dist/sitemap
+      #     pnpm cpx "docs/theme/dist/**" dist
 
-      - name: Deploy docs
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # 设置部署文档所在的分支名称
+          # repository-name: vuepress-theme-hope/v2
           branch: gh-pages
-          # 所部署文档的目录
-          folder: src/.vuepress/dist
+          folder: dist
+          # token: ${{ secrets.ACCESS_TOKEN }}
+          # single-commit: true
