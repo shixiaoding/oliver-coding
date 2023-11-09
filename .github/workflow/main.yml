@@ -1,15 +1,15 @@
 name: Deploy Github Docs
 
-# on:
-#   workflow_call:
-#     secrets:
-#       ACCESS_TOKEN:
-#         required: true
-
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
+    secrets:
+      ACCESS_TOKEN:
+        required: true
+
+# on:
+#   push:
+#     branches:
+#       - main
 
 jobs:
   deploy-github-pages:
@@ -42,7 +42,10 @@ jobs:
       - name: Docs build
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: pnpm run docs:vite-build
+        run: |-
+          pnpm run docs:build
+          > src/.vuepress/dist/.nojekyll
+        # run: pnpm run docs:vite-build
 
       # - name: Combine output
       #   run: |
@@ -73,6 +76,6 @@ jobs:
         with:
           # repository-name: vuepress-theme-hope/v2
           branch: gh-pages
-          folder: dist
-          # token: ${{ secrets.ACCESS_TOKEN }}
-          # single-commit: true
+          folder: src/.vuepress/dist
+          token: ${{ secrets.ACCESS_TOKEN }}
+          single-commit: true
