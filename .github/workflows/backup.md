@@ -1,10 +1,14 @@
 name: Deploy Github Docs
 
 on:
-  workflow_call:
-    secrets:
-      ACCESS_TOKEN:
-        required: true
+  push:
+    # 分支随意
+    branches:
+      - main
+  # workflow_call:
+  #   secrets:
+  #     ACCESS_TOKEN:
+  #       required: true
 
 # on:
 #   push:
