@@ -46,5 +46,5 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           # SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
         with:
-          source-repo: "git@github.com:wearerequired/git-mirror-action.git"
-          destination-repo: "git@bitbucket.org:wearerequired/git-mirror-action.git"
+          source-repo: "git@github.com:shixiaoding/oliver-coding.git"
+          destination-repo: "git@gitee.com:sdoliver/oliver-coding.git"
