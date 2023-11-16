@@ -43,7 +43,7 @@ jobs:
     steps:
       - uses: wearerequired/git-mirror-action@v1
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
         with:
           source-repo: "git@github.com:shixiaoding/oliver-coding.git"
           destination-repo: "git@gitee.com:sdoliver/oliver-coding.git"
