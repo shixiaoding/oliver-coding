@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o as t,c,a as o}from"./app-ad3239e5.js";const n={},r=o("p",null,"2222",-1),_=[r];function s(a,l){return t(),c("div",null,_)}const m=e(n,[["render",s],["__file","concurrent.html.vue"]]);export{m as default};
